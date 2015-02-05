@@ -2,7 +2,6 @@
 
 import UIKit
 
-var str = "Hello, playground"
 
 // function with no parameters and no return values
 
@@ -19,16 +18,23 @@ noParams()
 //
 //
 
-func oneOne(string: String) -> Bool {
+func isUpperCase(string: String) -> Bool {
     
     return string.uppercaseString == string
 }
-var answer: Bool = oneOne("today")
-answer = oneOne("TODAy")
-answer = oneOne("TODAY")
+
+// we can use this function as follows
+var myAnswer: Bool = isUpperCase("Ms. Marvel")
+
+myAnswer = isUpperCase("Black Widow")
+myAnswer = isUpperCase("WONDER WOMAN")
+
+// notice that Swift is smart enough to figure out what type the variable answer (below) has to be since isUpperCase returns a Bool
+
+var answer = isUpperCase("Jean Grey")
 
 // notice that you can also use the function INSIDE of the println() function to show the result as a String
-println(oneOne("TODAY"))
+println(isUpperCase("STORM"))
 
 
 //also, please note that the function can return ANY type, whether it is a predefined one like Int, Double, Bool, or an Array or Dictionary, or any type class defined by the user (or by Apple), like UIViewController, UIButton, UILabel, etc.
