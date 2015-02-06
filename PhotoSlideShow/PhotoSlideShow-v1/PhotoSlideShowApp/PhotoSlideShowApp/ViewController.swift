@@ -9,17 +9,46 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var myImageView: UIImageView!
 
+    var currentPictureIndex:Int = 0
+
+    
+    var photoArray = [UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        for index in 1...9{
+            if let newImage = UIImage(named: "photo-\(index)-small.png"){
+                photoArray.append(newImage)
+            }
+
+        }
+        displayPicture()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func displayPicture(){
+        
+        myImageView.image = photoArray[abs(currentPictureIndex) % photoArray.count]
     }
+    
+    @IBAction func previousPicture(sender: UIButton) {
+        currentPictureIndex -= 1
+        displayPicture()
+    }
+    
+    @IBAction func nextPicture(sender: UIButton) {
+        currentPictureIndex += 1
+        displayPicture()
 
+    }
+    
+    @IBAction func randomizePictures(sender: UIButton) {
+        currentPictureIndex = Int(arc4random())
+        displayPicture()
+    }
 
 }
 

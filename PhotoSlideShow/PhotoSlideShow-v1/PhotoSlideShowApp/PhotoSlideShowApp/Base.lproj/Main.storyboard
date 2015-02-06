@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,22 +17,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="photo-1422479516648-9b1f0b6e8da8-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="6C7-VN-sn6">
-                                <rect key="frame" x="0.0" y="132" width="600" height="335"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My SlideShow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="211-4h-gJb">
+                                <rect key="frame" x="245" y="90" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phk-XS-bi8">
+                                <rect key="frame" x="284" y="484" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPicture:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bfv-dK-OUh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkd-Fm-JjU">
+                                <rect key="frame" x="247" y="533" width="106" height="30"/>
+                                <state key="normal" title="Random Order!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomizePictures:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YEo-W9-dkr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxH-wu-cqw">
+                                <rect key="frame" x="269" y="446" width="63" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="vQG-Bz-hHb"/>
+                                </constraints>
+                                <state key="normal" title="Previous">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousPicture:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Hv-MR-VxF"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6C7-VN-sn6">
+                                <rect key="frame" x="100" y="166" width="400" height="225"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="6C7-VN-sn6" secondAttribute="centerX" id="7qj-hF-pu1"/>
-                            <constraint firstAttribute="centerY" secondItem="6C7-VN-sn6" secondAttribute="centerY" id="ZeR-wz-oOY"/>
+                            <constraint firstItem="6C7-VN-sn6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="84" id="5Jl-AG-JUL"/>
+                            <constraint firstItem="211-4h-gJb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="70" id="5Ok-mv-cuc"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Fkd-Fm-JjU" secondAttribute="bottom" constant="37" id="AHh-f3-GgC"/>
+                            <constraint firstItem="6C7-VN-sn6" firstAttribute="top" secondItem="211-4h-gJb" secondAttribute="bottom" constant="55" id="FXG-Qb-wCz"/>
+                            <constraint firstItem="KxH-wu-cqw" firstAttribute="centerX" secondItem="Phk-XS-bi8" secondAttribute="centerX" id="G8e-zX-A1Q"/>
+                            <constraint firstAttribute="centerX" secondItem="6C7-VN-sn6" secondAttribute="centerX" id="TIa-PT-h2U"/>
+                            <constraint firstItem="211-4h-gJb" firstAttribute="centerX" secondItem="6C7-VN-sn6" secondAttribute="centerX" id="XwU-eU-ukg"/>
+                            <constraint firstAttribute="centerX" secondItem="Phk-XS-bi8" secondAttribute="centerX" id="h59-kc-IDO"/>
+                            <constraint firstItem="Fkd-Fm-JjU" firstAttribute="top" secondItem="Phk-XS-bi8" secondAttribute="bottom" constant="19" id="hFK-4X-1a2"/>
+                            <constraint firstItem="Phk-XS-bi8" firstAttribute="top" secondItem="KxH-wu-cqw" secondAttribute="bottom" constant="8" symbolic="YES" id="isa-ps-q8V"/>
+                            <constraint firstItem="KxH-wu-cqw" firstAttribute="centerX" secondItem="6C7-VN-sn6" secondAttribute="centerX" id="n0p-TX-M4W"/>
+                            <constraint firstAttribute="centerY" secondItem="6C7-VN-sn6" secondAttribute="centerY" constant="21.5" id="rmB-rj-lby"/>
+                            <constraint firstItem="Fkd-Fm-JjU" firstAttribute="centerX" secondItem="Phk-XS-bi8" secondAttribute="centerX" id="y7z-CL-BI7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myImageView" destination="6C7-VN-sn6" id="HF2-GY-nQ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="408" y="148"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="photo-1422479516648-9b1f0b6e8da8-small.png" width="400" height="267"/>
-    </resources>
 </document>
