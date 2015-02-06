@@ -44,7 +44,22 @@ while number <= 100{
 //
 //
 
-// Here is the correct answer
+    // Here is the correct answer using a for in loop
+for num in 1...100{
+    if num % 3 == 0 && num % 5 == 0 {
+        println("FizzBuzz")
+    } else if num % 5 == 0{
+        println("Buzz")
+    } else if num % 3 == 0{
+        println("Fizz")
+    }
+    else {
+        println("\(num)")
+    }
+}
+
+
+// Here is the correct answer using a while loop
 number = 1
 while number <= 100{
     if number % 3 == 0 && number % 5 == 0 {
@@ -61,12 +76,13 @@ while number <= 100{
 }
 
 
-// super bonus solution - if time permits
-// alternative solution using case and switch and tuples
-    
-number = 1
-//  initialize a new variable of type tuple so that you don't have to use optionals
 
+
+// alternative solution using Switch..Case and tuples
+    
+
+//  initialize a new variable of type tuple so that you don't have to use optionals
+number = 1
 var result :(Int,Int) = (0,0)
 while number <= 100 {
     result = (number % 3, number % 5)
