@@ -15,11 +15,44 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRk-FO-QF2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Fizz Buzz View" id="P6z-fz-ko4"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FizzBuzz of \(number) is \(FizzBuzz(number))" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vog-bY-uzP">
+                                <rect key="frame" x="107" y="225" width="387" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an Integer" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VAk-Rp-TGa">
+                                <rect key="frame" x="238" y="97" width="124" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="0.71966661310998292" green="1" blue="0.39880312380150318" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vog-bY-uzP" firstAttribute="top" secondItem="VAk-Rp-TGa" secondAttribute="bottom" constant="98" id="5cY-dJ-liL"/>
+                            <constraint firstAttribute="centerX" secondItem="VAk-Rp-TGa" secondAttribute="centerX" id="Abu-FX-Xty"/>
+                            <constraint firstItem="VAk-Rp-TGa" firstAttribute="top" secondItem="KRk-FO-QF2" secondAttribute="bottom" constant="53" id="KMF-5o-LL1"/>
+                            <constraint firstAttribute="trailing" secondItem="KRk-FO-QF2" secondAttribute="trailing" id="U4O-Gn-BVB"/>
+                            <constraint firstItem="KRk-FO-QF2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="aGt-TS-RpY"/>
+                            <constraint firstItem="KRk-FO-QF2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="kNX-UZ-TUM"/>
+                            <constraint firstAttribute="centerX" secondItem="vog-bY-uzP" secondAttribute="centerX" id="res-zF-TMY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fizzBuzzLabel" destination="vog-bY-uzP" id="Yad-eA-Xma"/>
+                        <outlet property="textField" destination="VAk-Rp-TGa" id="JF4-BN-KR8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="300" y="301"/>
         </scene>
     </scenes>
 </document>

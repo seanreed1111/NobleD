@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F44DE451A892E460003FF5E /* FizzBuzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F44DE441A892E460003FF5E /* FizzBuzz.swift */; };
 		0FBE4DC91A88175900C2BA89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4DC81A88175900C2BA89 /* AppDelegate.swift */; };
 		0FBE4DCB1A88175900C2BA89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4DCA1A88175900C2BA89 /* ViewController.swift */; };
 		0FBE4DCE1A88175900C2BA89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FBE4DCC1A88175900C2BA89 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F44DE441A892E460003FF5E /* FizzBuzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FizzBuzz.swift; sourceTree = "<group>"; };
 		0FBE4DC31A88175900C2BA89 /* FizzBuzzProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzBuzzProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FBE4DC71A88175900C2BA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FBE4DC81A88175900C2BA89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				0FBE4DCF1A88175900C2BA89 /* Images.xcassets */,
 				0FBE4DD11A88175900C2BA89 /* LaunchScreen.xib */,
 				0FBE4DC61A88175900C2BA89 /* Supporting Files */,
+				0F44DE441A892E460003FF5E /* FizzBuzz.swift */,
 			);
 			path = FizzBuzzProject;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				0FBE4DCB1A88175900C2BA89 /* ViewController.swift in Sources */,
 				0FBE4DC91A88175900C2BA89 /* AppDelegate.swift in Sources */,
+				0F44DE451A892E460003FF5E /* FizzBuzz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				0FBE4DE41A88175900C2BA89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FBE4DE51A88175900C2BA89 /* Build configuration list for PBXNativeTarget "FizzBuzzProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				0FBE4DE71A88175900C2BA89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
