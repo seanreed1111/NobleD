@@ -13,7 +13,7 @@
 // This is what fizzBuzz looks like as a function if 
 // we use Switch - Case
 
-func fizzBuzz(number: Int) ->String{
+func fizzBuzz(number: Int) -> String{
     var result = String()  //this constructs an empty String
     let division = (number % 3, number % 5)
     
@@ -28,7 +28,7 @@ func fizzBuzz(number: Int) ->String{
 
 // This is the equivalent version using if-then-elseif-else
 
-func fizzBuzz2(number: Int) ->String{
+func fizzBuzz2(number: Int) -> String{
     var result = String()
     
     if number % 3 == 0 && number % 5 == 0 {
