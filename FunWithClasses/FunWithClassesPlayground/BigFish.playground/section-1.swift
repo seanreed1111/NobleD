@@ -62,7 +62,7 @@ let fish2b = Fish2()
 fish2b.talk()
 
 
-// Fish w/o an init method and using size: String?
+// Fish w/o an init method and using size: String!
 
 class Fish3{
     var size: String!
@@ -142,6 +142,33 @@ fish4.talk()
 // But this doesn't seem right, because we know that (adult) fish have a definite size.
 // So, we will go the second way, and write an initializer
 
+// rewritten version
+
+class Fish5{
+    var mySize:Size
+    
+    init(size: Size){
+        mySize = size  // we set mySize to the size parameter that passed into the init function by the user
+    }
+    
+    func talk() -> String{
+        return "I am a \(mySize) fish"
+    }
+
+}
+
+let fish5 = Fish5(size: .VeryBigFish)
+fish5.talk()
+
+
+// so now look at what we've done here
+// anytime we want to make a new instance of type Fish5, we MUST now pass
+// its size as a parameter, so that it can run the initializer.
+//Otherwise, we CANNOT make an object of type Fish5.
+
+
+// Just as a side note Apple's approach to initializers is to use them only when necessary. As we will see down the line, they usually take the approach that we used in Fish2 and Fish3, ie. they define many properties as optionals so that it is ok that they be nil when the object is first created. 
+// This gives the programmer the flexibility to set whatever properties they need to set later as needed, not at object creation time.
 
 /*
 
@@ -157,7 +184,7 @@ Summary and Transition to the next Section
 Now our classes are small, with only a few properties and methods. Apple, in order to make iOS programming easier straight out of the box, has spent a number of yeasr defining big classes of objects with a lot of power and functionality. The objects are so powerful that they handle lots of the details for you by default, but they are still flexible enough to let you modify their properties easily. Also, just like we made our Shark class as a subclass of Fish, we can also subclass substantially all of the classes that Apple has defined and add in any functionality that we need!
 That is the power of object oriented programming. We can make base classes and then by using inheritance and subclassing we can tailor them to our exact needs.
 
-In the next subject, let's talk about a few of Apple's pre-made classes
+In the next section, let's talk about a few of Apple's pre-made classes
 1)UIView
 2)UIButton
 3)UILabel
