@@ -3,16 +3,10 @@
 import UIKit
 
 // intro to classes
+//Fish
 
 
-//Real World Things that you can class and subclass by properties and type
 
-//living things / biological classification
-//animals
-//Cars
-//Stars
-//Robots
-//super heroes and their powers
 
 
 
@@ -29,3 +23,5 @@ import UIKit
 //Properties
 //Methods
 //Pass by Reference ONLY
+
+

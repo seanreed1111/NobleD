@@ -50,5 +50,10 @@ class ViewController: UIViewController {
         displayPicture()
     }
 
+//    This method will generate a random Int value between the given minimum and maximum
+//    
+//    func randomInt(min: Int, max:Int) -> Int {
+//        return min + Int(arc4random_uniform(UInt32(max - min + 1)))
+//    }
 }
 
