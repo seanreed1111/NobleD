@@ -55,8 +55,11 @@ var square = myIntArray[3] * myIntArray[3] // 20*20
 println(myStringArray[0])
 println(myStringArray[1])
 println(myDoubleArray[1])
+println(myInt)
+println(square)
 
-// you can see that I've snuck in a new function, println(), which prints out strings
+
+// you can see that I've snuck in a new function, println(), which prints out objects of String type given various types of input parameters
 
 
 // What other sorts of operations do you think people might like to do with arrays?
