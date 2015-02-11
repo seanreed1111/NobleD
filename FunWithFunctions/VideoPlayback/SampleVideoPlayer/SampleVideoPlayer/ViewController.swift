@@ -20,27 +20,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // "http://www.thumbafon.com/code_examples/video/segment_example/prog_index.m3u8"
+
         // "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
         
         let videoURLWithPath = "http://www.thumbafon.com/code_examples/video/segment_example/prog_index.m3u8"
         
         let videoURL = NSURL(string: videoURLWithPath)
         
-//        asset = AVAsset.assetWithURL(videoURL) as? AVAsset
+        var player1 = AVPlayer(URL: videoURL)
         
-//        playerItem = AVPlayerItem(asset: asset)
-//        player = AVPlayer(playerItem: playerItem)
-        
-        var player2 = AVPlayer(URL: videoURL)
-        
-        playerLayer = AVPlayerLayer(player: player2)
+        playerLayer = AVPlayerLayer(player: player1)
         playerLayer!.frame = view.frame
         
         view.layer.addSublayer(playerLayer)
         
-        player2.play()
-        println("Fast forward available: \(player2.currentItem.canPlayFastForward)")
+        player1.play()
+
     }
 
 
