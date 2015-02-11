@@ -26,6 +26,7 @@ class ViewController: UIViewController {
             }
 
         }
+        photoArray.append(UIImage(named: "photo-9-small2.png")!)
         displayPicture()
     }
 

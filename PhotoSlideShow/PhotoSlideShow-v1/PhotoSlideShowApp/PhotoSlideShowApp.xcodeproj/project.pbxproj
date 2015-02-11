@@ -21,6 +21,8 @@
 		5B3E6C731A8551990064B83B /* photo-7-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E6C6B1A8551990064B83B /* photo-7-small.png */; };
 		5B3E6C741A8551990064B83B /* photo-8-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E6C6C1A8551990064B83B /* photo-8-small.png */; };
 		5B3E6C751A8551990064B83B /* photo-9-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E6C6D1A8551990064B83B /* photo-9-small.png */; };
+		5BF77FC71A8A7DB5006BBA8F /* PNG in Resources */ = {isa = PBXBuildFile; fileRef = 5BF77FC61A8A7DB5006BBA8F /* PNG */; };
+		5BF77FC91A8A7DDE006BBA8F /* photo-9-small2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF77FC81A8A7DDE006BBA8F /* photo-9-small2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		5B3E6C6B1A8551990064B83B /* photo-7-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-7-small.png"; sourceTree = "<group>"; };
 		5B3E6C6C1A8551990064B83B /* photo-8-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-8-small.png"; sourceTree = "<group>"; };
 		5B3E6C6D1A8551990064B83B /* photo-9-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-9-small.png"; sourceTree = "<group>"; };
+		5BF77FC61A8A7DB5006BBA8F /* PNG */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PNG; path = ../../../../../Pictures/PNG; sourceTree = "<group>"; };
+		5BF77FC81A8A7DDE006BBA8F /* photo-9-small2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-9-small2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 			children = (
 				5B3E6C081A8531FC0064B83B /* AppDelegate.swift */,
 				5B3E6C0A1A8531FC0064B83B /* ViewController.swift */,
+				5BF77FC61A8A7DB5006BBA8F /* PNG */,
 				5B3E6C0C1A8531FC0064B83B /* Main.storyboard */,
 				5B3E6C0F1A8531FC0064B83B /* Images.xcassets */,
 				5B3E6C111A8531FC0064B83B /* LaunchScreen.xib */,
@@ -134,6 +139,7 @@
 			children = (
 				5B3E6C661A8551980064B83B /* photo-2-small.png */,
 				5B3E6C671A8551980064B83B /* photo-3-small.png */,
+				5BF77FC81A8A7DDE006BBA8F /* photo-9-small2.png */,
 				5B3E6C681A8551990064B83B /* photo-4-small.png */,
 				5B3E6C691A8551990064B83B /* photo-5-small.png */,
 				5B3E6C6A1A8551990064B83B /* photo-6-small.png */,
@@ -225,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF77FC71A8A7DB5006BBA8F /* PNG in Resources */,
 				5B3E6C731A8551990064B83B /* photo-7-small.png in Resources */,
 				5B3E6C0E1A8531FC0064B83B /* Main.storyboard in Resources */,
 				5B3E6C701A8551990064B83B /* photo-4-small.png in Resources */,
@@ -232,6 +239,7 @@
 				5B3E6C711A8551990064B83B /* photo-5-small.png in Resources */,
 				5B3E6C6F1A8551990064B83B /* photo-3-small.png in Resources */,
 				5B3E6C741A8551990064B83B /* photo-8-small.png in Resources */,
+				5BF77FC91A8A7DDE006BBA8F /* photo-9-small2.png in Resources */,
 				5B3E6C131A8531FC0064B83B /* LaunchScreen.xib in Resources */,
 				5B3E6C101A8531FC0064B83B /* Images.xcassets in Resources */,
 				5B3E6C6E1A8551990064B83B /* photo-2-small.png in Resources */,
@@ -446,6 +454,7 @@
 				5B3E6C241A8531FC0064B83B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B3E6C251A8531FC0064B83B /* Build configuration list for PBXNativeTarget "PhotoSlideShowAppTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +463,7 @@
 				5B3E6C271A8531FC0064B83B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
