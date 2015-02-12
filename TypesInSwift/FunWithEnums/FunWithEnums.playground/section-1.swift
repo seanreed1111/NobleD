@@ -56,10 +56,10 @@ myProfiles.append(profile4)
 for profile in myProfiles {
     switch profile{
         case .Yes:
-            println("Yes") // Move this profile to the "Favorites" folder
+            println("Yes") // A keeper! Move this profile to the "Favorites" folder
         
         case .No:
-            println("No") // Move this profile to the "Deleted Items" folder
+            println("No") // No thanks. Move this profile to the "Deleted Items" folder
         
         case .Maybe:
             println("Maybe") // Move this profile to the "Save for Later" folder

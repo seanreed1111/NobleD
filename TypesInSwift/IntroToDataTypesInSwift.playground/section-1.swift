@@ -37,6 +37,14 @@ myString = String()
 //Try it. What does the error say?
 // There are several other primitive data types that you will use frequently, but many of the things you will output to your iPhone Screen inside labels, textViews, etc will be of String. So make sure Strings are your friends.
 
+
+////////////////////////////////////////////////////////////
+// Begin discussion of println, String Interpolation, String Addition, printing special characters like ", /, etc.
+
+
+
+
+////////////////////////////////////////////////////////////
 //Other numberical data types that are possible
 var myInt: Int = 42
 var myDouble : Double = 42.0
@@ -63,8 +71,26 @@ let myDouble2: Double = 21.0
 //
 // myInt2 = 99
 
+///////
+//Bool
+//////
 
-// Note. You need to declare [almost] all of your variables before you use them. Once they've been declared, you don't have to declare them again.
+// Swift also has a logical type called Bool, that can only take two possible values, true and false 
+
+var isAvailable: Bool = true
+var isRaining: Bool = false
+var isActive = true  // this also works because of type inference
+
+
+// you can prefix a Bool  the ! operator to flip a Bool to the opposite state
+
+!isAvailable  // false
+!isRaining  // true
+!isActive // false
+
+
+
+// Note. You need to declare variables before you use them. Once they've been declared, you don't have to declare them again.
 
 // String, Int, Double are all defined types that you might be familiar with from other languages
 // There are also a huge number of types defined by Apple that you will become familiar with on your journey to becoming an iOS programmer.
