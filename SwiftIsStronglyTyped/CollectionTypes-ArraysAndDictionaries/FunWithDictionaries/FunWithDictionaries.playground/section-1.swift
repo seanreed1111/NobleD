@@ -24,7 +24,7 @@ myDictionary["Trixie"]
 
 myDictionary["Marcia"] // nil, since there is no key "Marcia" present
 
-// please notice that you can ONLY search via the keys
+// please notice that you can ONLY search dictionaries via the keys
 // the following searches also return nil
 
 myDictionary["Kramden"] // nil, no key of "Kramden" exists
