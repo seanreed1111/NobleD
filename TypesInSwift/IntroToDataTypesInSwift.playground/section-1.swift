@@ -81,6 +81,18 @@ var isAvailable: Bool = true
 var isRaining: Bool = false
 var isActive = true  // this also works because of type inference
 
+if isAvailable {
+    //do stuff
+    println("The camera is available")
+}
+
+if !isRaining {
+    println("Good thing it is not raining.")
+}
+
+if isActive{
+    println("Your application is active.")
+}
 
 // you can prefix a Bool  the ! operator to flip a Bool to the opposite state
 
