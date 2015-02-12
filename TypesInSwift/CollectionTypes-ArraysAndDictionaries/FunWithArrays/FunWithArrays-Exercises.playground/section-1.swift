@@ -4,7 +4,7 @@ import UIKit
 
 var str = "Hello, Arrays"
 
-// Exercises
+// Exercises (prerequisites: Loops, if-then-else, append)
 
 // 1) write a program that starts with an array of integers and makes a corresponding array of Bools, true if the integer is even, false if the integer is odd
 
