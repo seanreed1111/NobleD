@@ -60,5 +60,16 @@ By far, the most common usages of delegates are for textfields and tableviews, a
 
 We are going to work through a simple example first, using the UITextField and its delegate. TableView will come in the second course.
 
-I don't expect we'll have time to talk about the protocols for the NSURLConnection objects. We will cover NSURLConnection in detail in a future course (might or might not be the second one). But I've included a file snippet for your reference just so you can see it follows the three steps as laid out above.
+Even though the methods obviously change, the delegate pattern looks exactly the same whereever it is implemented. Make sure you are at least familiar with the steps required.
+
+ENDNOTES
+
+We will cover NSURLConnection and its protocols in detail in a future course (might or might not be the second one). But I've included a file snippet for your reference just so you can see it follows the three steps as laid out above. If you are really interested, of course, the full docs are also online.
+https://developer.apple.com/search/?q=nsurlconnection&platform=iOS
+
+There are actually THREE different protocols associated with NSURLCOnnection objects:
+	NSURLConnectionDataDelegate Protocol,
+	NSURLConnectionDelegate Protocol, and NSURLConnectionDownloadDelegate Protocol
+
+Even though the methods obviously change, the delegate pattern looks exactly the same whereever it is implemented. Make sure you are at least familiar with the steps required.
 

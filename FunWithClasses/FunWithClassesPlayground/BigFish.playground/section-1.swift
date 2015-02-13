@@ -6,77 +6,22 @@ var str = "Hello, Big Fish"
 
 // Game: Big Fish
 /*
-Put all the info about the exercise in the front, so that if someone wants to just get started w/o following along step by step, they can do so.
 
+//////
+// Putting it all together - Defining a Fish class
+//////
 Out in nature we know that little fish get eaten by big fish, and
 big fish get eaten by even bigger fish.
 We are going to encapsulate this in a simple game which is going to get our feet wet in terms of Classes, Functions, and methods.
 
 We are going to define a class called Fish. This class will have a property called size which we will set when we make a new fish and which cannot be changed
-We will also define a few methods on the Fish class, including a method called fight, and a method called talk, which lets an instance of the class Fish tell us what size fish it is (by printing to the screen.)
-
+We will also define a few methods on the Fish class, inlcuding a method called talk, which lets an instance of the class Fish tell us what size fish it is (by printing to the screen.)
 Next, we will make a subclass of Fish called Shark. Our class Shark will inherit all of the methods and properties of Fish, but will also override some of them, so you can see when the override notation has to be used.
 
 
 
 */
 
-// we are going to do the same thing multiple times, in slightly different ways
-
-// Fish w/o an init method and using size = small
-// Fish w/o an init method and using size: String?
-// Fish w/o an init method and using size: enum
-// Fish with an init method for size
-
-// Fish w/o an init method and using size = small
-class Fish1 {
-    var size = "small"
-    
-    func talk() -> String{
-        return "I am a \(size) fish"
-    }
-    
-    func fight() ->String{
-        return "I am the winner" //we'll fix this later
-    }
-}
-
-let fish1 = Fish1()
-fish1.talk()
-fish1.size = "big"
-fish1.talk()
-
-// Fish w/o an init method and using size: String?
-class Fish2{
-    var size: String?
-    func talk() -> String{
-        return "I am a \(size) fish"
-    }
-}
-
-let fish2a = Fish2()
-fish2a.size = "small"
-fish2a.talk()
-
-let fish2b = Fish2()
-fish2b.talk()
-
-
-// Fish w/o an init method and using size: String!
-
-class Fish3{
-    var size: String!
-    func talk() -> String{
-        return "I am a \(size) fish"
-    }
-}
-
-let fish3a = Fish3()
-fish3a.size = "Very Big"
-fish3a.talk()
-
-let fish3b = Fish3()
-fish3b.talk()
 
 // Fish w/o an init method and using size: enum
 
@@ -91,64 +36,43 @@ enum Size{
     case VeryBigFish
 }
 
+// recall that this makes Size as a type, and we can now declare new variables of this type
 
-class Fish4{
+
+
+class Fish{
     var mySize: Size = .SmallFish
     
-    // the "dot" before the case is important and MANDATORY
-    // however, Swift is smart enough for you to also be able to 
-    // write this:
-    //    var mySize = .SmallFish.
-
-    // Swift infers that since it takes an enumValue from Size, the variable mySize MUST be of type Size
     
     func talk() -> String{
         return "I am a \(mySize) fish"
     }
 }
 
-let fish4 = Fish4()
-fish4.talk()
+// the "dot" before the case is important and MANDATORY
+// however, Swift is smart enough for you to also be able to
+// write this:
+//    var mySize = .SmallFish.
+
+// Swift infers that since it takes an enumValue from Size, the variable mySize MUST be of type Size
+
+// Now let's make a Fish object. 
+// The act of making a new object of a new class is called instantiation
+
+let fish1 = Fish()
+fish1.talk()
 
 
-// Please note that for objects of class Fish1 and Fish4, we defined all fish created to start off as a small fish (or SmallFish). But that's not really fun. What if we want to define the size of the fish right when we create it. 
-// when you want to set properties in instances of your class right when they are created, that is called an initializer.
-// In our class, we have to include what is called an init method, usually put right near the top of the class, after its properties.
-// Let's make a new class Fish5 based on Fish4, but we won't automatically make any new fish have mySize = .SmallFish
 
 
-// first version
-//class Fish5{
-//    var mySize:Size
-//    
-//    func talk() -> String{
-//        return "I am a \(mySize) fish"
-//    }
-//
-//}
-//
-//let fish5 = Fish5()
-// let's look at the error message we get here when we uncomment this class.
-// it says "Fish5 cannot be constructed because it has no
-// accessible initializers"
 
-// In other words, when we create a no instance, fish5, Swift expects that all of its properties are either defined or Optional, so that they are allowed to be nil.
+// rewritten version, using an initializer
 
-
-// So there are two ways to fix this problem. 
-
-// One, we rewrite the variables to var mySize: Size?
-
-// But this doesn't seem right, because we know that (adult) fish have a definite size.
-// So, we will go the second way, and write an initializer
-
-// rewritten version
-
-class Fish5{
+class newFish{
     var mySize:Size
     
     init(size: Size){
-        mySize = size  // we set mySize to the size parameter that passed into the init function by the user
+        mySize = size  // we set mySize to the size parameter will be passed into the init function by the user
     }
     
     func talk() -> String{
@@ -157,18 +81,15 @@ class Fish5{
 
 }
 
-let fish5 = Fish5(size: .VeryBigFish)
-fish5.talk()
+let newFish1 = newFish(size: .VeryBigFish)
+newFish1.talk()
 
 
 // so now look at what we've done here
-// anytime we want to make a new instance of type Fish5, we MUST now pass
+// anytime we want to make a new instance of type newFish, we MUST now pass
 // its size as a parameter, so that it can run the initializer.
-//Otherwise, we CANNOT make an object of type Fish5.
+//Otherwise, we CANNOT make an object of type newFish.
 
-
-// Just as a side note Apple's approach to initializers is to use them only when necessary. As we will see down the line, they usually take the approach that we used in Fish2 and Fish3, ie. they define many properties as optionals so that it is ok that they be nil when the object is first created. 
-// This gives the programmer the flexibility to set whatever properties they need to set later as needed, not at object creation time.
 
 /*
 
