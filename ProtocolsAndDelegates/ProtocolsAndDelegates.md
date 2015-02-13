@@ -51,6 +51,7 @@ AVSpeechSynthesizer -> Computer Speech Object
 AVAudioSession -> Audio Playback and Recording Object
 UITextField -> Text Input and Capture Object
 UITableView -> Creation and Management of Table View Objects
+UIScrollView -> Scroll View Object
 UIApplication -> Object representing your entire Application
 CLLLocationManager -> Object that delivers heading and location data to your app
 EKEventView -> Controller for your calendar view 
