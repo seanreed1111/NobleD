@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIDynamicAnimatorDelegate {
         animator = UIDynamicAnimator(referenceView: self.view)
         
         bounce  = UIDynamicItemBehavior(items: [label])
-        bounce.elasticity = CGFloat(0.76)
+        bounce.elasticity = CGFloat(0.97)
         
         gravity = UIGravityBehavior(items: [label])
         gravity.gravityDirection = CGVectorMake(0,1)
@@ -33,14 +33,7 @@ class ViewController: UIViewController, UIDynamicAnimatorDelegate {
         animator.addBehavior(bounce)
         animator.addBehavior(collision)
         animator.addBehavior(gravity)
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
