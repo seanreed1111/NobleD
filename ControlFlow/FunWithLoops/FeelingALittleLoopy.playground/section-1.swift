@@ -18,64 +18,85 @@ var str = "Hello, loops"
 // The second flavor is for iterating over all of the items in a collection, for example an array or a dictionary. 
 // We'll take each of these in turn
 
-// Suppose I am writing an app depicting the final battle of a hero with a hated foe. Let's say I have a catchphrase that want to repeat exactly ten times while I fight him.
+
+//let's talk about loops in Swift
+// we used the example of 1...10 /this is called a closed range
+
+
+// it means going from 1 to 10, inclusive, by ones
+//1,2,3,4,5,6,7,8,9,10
+
+// so if we want to repeat something ten times, we could write it as follows:
+
+for index in 1...10 {
+    //do something
+}
+
+for loop in 1...10 {
+    //do something
+}
+
+// we ALWAYS enclose the part that we want to repeat in curly braces.
+
+// a few words about the variable index
+//the variable index is of type Int that goes from 1,2,3, etc up to ten as the loop gets executed.
+// The variable name "index" is completely arbitrary, and programmers typically change it to whatever valid variable name best suits the problem they are working on.
+
+// Swift also has the concept of half open ranges, 1..<10
+// this means 1 to 10, exclusive of 10
+// 1,2,3,4,5,6,7,8,9
+
+//in a loop, that would look like this
+
+for index in 1..<10 {
+    //do something
+}
+
+
+// Suppose I am writing an app depicting the final battle of a hero with a hated foe. 
+//Let's say I have a catchphrase that want to repeat exactly eight times while I fight him.
 
 // That is a perfect situation for the use of a For Loop!
 
-for loopCounter in 1...10{
+for loopCounter in 1...8{
     println("Hello. My name is Inigo Montoya. You killed my father. Prepare to die.")
 }
 
-// Whatever we enclose inside the curly braces would be repeated ten times.
-// The first time through, loopCounter is set to 1.
-// The second time through, loopCounter is set to 2.
-// etc. etc.
-// The tenth time through, loopCounter is set to 10.
-// Since the range given (1...10) was from one to ten, inclusive, the loop halts, and whatever is next after the loop would then get run.
+// the function println() gets executed 8 times, so the String is printed eight times.
 
-// Please note that the name loopCounter is 100% arbitrary, and we could have named it any valid variable name in the world.
-// Normally, though, programmers tend to name it something that makes sense
+// HOW TO Print the value of the variable loopCounter as a String (inside of the for loop.)
 
-// We could also make Swift just print out the numbers from 1...10.
-// recall that the variable index starts at 1 and goes all the way up to 10.
-// so to count to 10, we need to look inside the value of the variable during each pass of the loop, and print the variable out as a String.
-// We do that using something called string interpolation
+// FOLLOW THESE STEPS
+// 1) enclose variable name in parentheses --> (loopCounter)
+// 2) stick a backslash in front --> \(loopCounter)
 
-// We can convert any variable into a String type by enclosing the variable inside parentheses and sticking a backslash in front of it.
+// Now, we can stick \(loopCounter) inside a pair of double quotes like any other text.
+// This is called string interpolation
 
-// Then, we can stick it inside of " " like any other String
-
-// we want to print the variable inside of loopCounter
-// enclose it in parentheses --> (loopCounter)
-// stick a backslash in front --> \(loopCounter)
-// now we can stick it inside a pair of double quotes 
 
 for loopCounter in 1...10{
-    println("\(loopCounter) Hello. My name is Inigo Montoya. You killed my father. Prepare to die.")
+    println(" \(loopCounter) ")
 }
 
-// Swift replaces \(loopCounter) with the VALUE of loopCounter everytime the loop is executed.
-
-// Note that it absolutely does not matter what I call the variable in this case, because whatever it is called, the For - In loop demands that the variable starts at 1 and goes up to 10, inclusive.
-
-// Thus, writing our loop with ANY variable name gives EXACTLY the same result.
-
-for index in 1...10{
-    println("\(index) Hello. My name is Inigo Montoya. You killed my father. Prepare to die.")
-}
+// Swift replaces \(loopCounter) with the VALUE contained in the variable loopCounter as text, everytime the loop is executed.
+//
 
 // Using FOR-IN loops with arrays
 
 // Recall that arrays are used to group a bunch of different objects of exactly the same type.
 
-// Often we want to iterate over an array and do something to each element inside the array. In Swift, this is also done with a FOR - IN loop
+// Often we want to iterate over an array and do something to each element inside the array. 
+//In Swift, this is also done with a for loop
 
-// Let's make an array of Strings representing the players of a different app
+// Let's make an array of Strings representing the players for a different app
 
 let characters:[String] = ["Katniss","Primrose","Gale", "Marvel", "Ripper", "Greasy Sae", "Haymitch", "Peeta"]
 
 for character in characters{
-    println("\(character)")
+    println(" \(character) ")
 }
-// This prints out each character from the array, one at a time.
+// just like when we used numerical ranges, the variable character takes on the value of each element in the characters array IN ORDER, starting with "Katniss" and ending with "Peeta"
+
+// we then us the string interpolation of the variable 
+// to prints each character from the array, one at a time.
 
