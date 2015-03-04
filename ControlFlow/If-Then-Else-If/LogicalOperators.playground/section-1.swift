@@ -1,11 +1,18 @@
-// Playground - noun: a place where people can play
 
-import UIKit
-
-var str = "Hello, logic"
-
-//  >, >=, <, <=, ==,!=, &&, ||, !
-// using logical operators in expressions and if-then-else-if statements
+//Logical operators are used to construct complex logical expressions from simpler statements
+// a logical expression is always either true or false.
+//
+//The most common logical operators are listed below:
+//
+//  >	GREATER THAN
+//  >=	GREATER THAN OR EQUAL TO
+//  <	LESS THAN
+//  <=	LESS THAN OR EQUAL TO
+//  ==	IS EQUAL TO
+//  !=	IS NOT EQUAL TO
+//  &&	AND
+//  ||	OR
+//  !	NOT
 
 // All of the above operators are used to make logical expressions in Swift. Logical expressions are statements that evaluate to type Bool, i.e., the statements are either true or false.
 
@@ -17,52 +24,50 @@ let three = 3
 
 two >= one // true
 two == one // false
-right == "Right" // test for equality.
-// to check you equality you MUST MUST use the double equal
+right == "Right"
 
-right != left // true != means "NOT EQUAL TO"
-one != two // true
 
-// && and || are compound operators. They represent AND and OR, respectively
+
+right != left
+one != two
+
 
 // For &&, ALL STATEMENTS must be true for the expression to be true
 
-two >= one && right != "Left" //true
-two >= one && right == left //false
+two >= one && right != "Left"
+two >= one && right == left
 
 // For ||,  If one statement is true, the entire expression is true
 
-two >= one || right == "Left" //true
-two >= one || right == left //true
+two >= one || right != "Left"
+two >= one || right == left
 
-//The ! operator toggles the expression to the opposite value. true -> false, and false -> true
+//The ! operator toggles the expression to the opposite value. 
+// In other words, true -> false, and false -> true
 
-true //true
-two > one //true
+two > one
 
-!true // false
 !(two > one)
 
-!false
-!(two >= one && right == left)
 
-//best practice is to limit your use of the '!' operator whereever humanly possible, as it can be confusing to readers of your code. Try to rewrite your expressions without it. 
+//best practice is to limit your use of the '!' operator whereever humanly possible, as it can be confusing to readers of your code.
 
 //for example, the expression above can be written as
+!(two >= one && right == left)
 
 two < one || right != left
 
 
-// It is common to use all of these operators in if-then-else constructions
+// It is common to use all of these logical operators in if-then-else constructions
 
 if (two < one || right != left){
-    //do something
+    println("The statement is true")
 }
 
-if right == "Right"{
-    //do another thing
+if right == "Left"{
+    println("The statement is true")
 } else{
-    // do yet another thing
+    println("The statement is false")
 }
 
 

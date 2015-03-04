@@ -2,19 +2,17 @@
 
 var str = "Hello, loops"
 
-// prerequisite - arrays, switch-case (b/c it introduces ranges
-
-
 // The other way to change the flow of how a program operates is called a loop
 
 //loops do a set number of statements multiple times. The statements that we want to repeat in enclosed in braces
 
-// There are a few types of loops in Swift, but in reality the one you will almost always use is the For - In loop.
+// There are a few types of loops in Swift, but in reality the one you will almost always use is the 
+//For - In loop.
 
 // So that is where we will concentrate our time.
 
 
-// The For In loop in reality has two different flavors
+// The For-In loop in reality has two different flavors
     
 //The first flavor is for iterating over ranges, for example 1...10
 // The second flavor is for iterating over all of the items in a collection, for example an array or a dictionary. 
@@ -80,23 +78,4 @@ for character in characters{
     println("\(character)")
 }
 // This prints out each character from the array, one at a time.
-
-// and just for fun, if you need to evaluate things according to the index.
-let actors:[String] = ["Jennifer", "Willow","Liam", "Jack", "Taylor", "Sandra", "Woody", "Josh"]
-
-
-// in case you need to get the index number, you can use this form.
-
-for (value , character) in enumerate(characters){
-    println("\(character) is at index \(value)")
-}
-
-// and in case you also want to get the actor's names as well.
-
-for (value , character) in enumerate(characters){
-    println("\(character) is played by \(actors[value])")
-}
-
-// While loop
-
 
