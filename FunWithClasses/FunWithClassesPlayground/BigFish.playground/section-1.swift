@@ -1,4 +1,4 @@
-// Playground - noun: a place where people can play
+
 
 import UIKit
 
@@ -104,11 +104,5 @@ Summary and Transition to the next Section
 
 Now our classes are small, with only a few properties and methods. Apple, in order to make iOS programming easier straight out of the box, has spent a number of yeasr defining big classes of objects with a lot of power and functionality. The objects are so powerful that they handle lots of the details for you by default, but they are still flexible enough to let you modify their properties easily. Also, just like we made our Shark class as a subclass of Fish, we can also subclass substantially all of the classes that Apple has defined and add in any functionality that we need!
 That is the power of object oriented programming. We can make base classes and then by using inheritance and subclassing we can tailor them to our exact needs.
-
-In the next section, let's talk about a few of Apple's pre-made classes
-1)UIView
-2)UIButton
-3)UILabel
-4)UIViewController
 
 */

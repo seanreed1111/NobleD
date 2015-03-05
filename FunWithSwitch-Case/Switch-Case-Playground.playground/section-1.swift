@@ -88,9 +88,3 @@ switch gear{
     default: break
 }
 //"We are in a high gear"
-
-// ranges are indicated with (...)if the range includes the upper limit
-// for example 1...3 means 1, 2, and 3
-
-// ranges are indicated with (..<)if the range excludes the upper limit
-// for example 1..<10 means 1,2,3,4,5,6,7,8, and 9. 10 is excluded.

@@ -1,3 +1,4 @@
+// Playground - noun: a place where people can play
 
 import UIKit
 
@@ -5,29 +6,9 @@ var str:String? = "Hello, Optionals"
 
 // An important concept to grasp with any computer language is how it deals with the concept of nothingness. 
 // Existentialism and computers go hand in hand
+// Since Swift is strict on types, they had to make a decision: What types are allowed to be 'nothing', also known as nil?
 
-// Since Swift is strict on types, they had to make a decision: What types are allowed to be 'nothing'?
-// we saw with dictionaries that if you define a dictionary with String keys and String values, use a key to look up a value, the variable returned is a completely different type: String?, called a string optional or an optional string.
-
-let dict = ["Freddie":"Mercury"]
-
-var newVariable = dict["Freddie"]
-
-//the type of newVariable is String?, to allow for the possibility that the key "Freddie" does not exist in the dictionary, and so newVariable might be nil
-
-newVariable = dict["Elton"]
-
-// Thus, since newVariable is a String?, the location in the computer's memory that is used to store newVariable either holds a String or it holds nil.
-
-//IMPORTANT: The type of String? is not the same as String. This is the definition of a COMPLETELY NEW Type
-
-// Trying to assign a variable of type String 
-
-let myString: String = "I don't think we're in Kansas anymore."
-let myOpt: String? = myString
-
-
-// two entirely different types in Swift. 
+// Think about a value before you set it. It is set to 'nothing'. 
 
 // As a simple example, suppose you've collected a student's test grades in an array
 

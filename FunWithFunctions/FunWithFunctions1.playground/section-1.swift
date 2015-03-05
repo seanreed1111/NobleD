@@ -1,9 +1,10 @@
 // Playground - noun: a place where people can play
 
-import UIKit
-
 
 // function with no parameters and no return values
+
+import Foundation  // needed for uppercaseString
+
 
 func noParams(){
     println("This function has no parameters.")
@@ -12,7 +13,8 @@ func noParams(){
 }
 // you can call the function noParams as follows. 
 // Note, you MUST put the parentheses after the function name in all cases.
-noParams()
+
+noParams() // this is how you call the function
 
 // function with one parameter and one return value
 //
@@ -39,14 +41,6 @@ println(isUpperCase("STORM"))
 
 //also, please note that the function can return ANY type, whether it is a predefined one like Int, Double, Bool, or an Array or Dictionary, or any type class defined by the user (or by Apple), like UIViewController, UIButton, UILabel, etc.
 
-// Also note: functions can also return optionals,
-// whether it is a single optional Button : UIButton?
-// whether it is an array of String optionals: [String?]
-//or an optional array of Ints: [Int]?
-//or an optional array of UILabel optionals: [UILabel?]?
-// one you correctly specify the return type, and make sure that your
-// function returns EXACTLY what the type SAYS it will return,
-// the sky's the limit. You can define whatever you like.
 
 // //
 // //
@@ -61,14 +55,17 @@ func theMax(number1:Int, number2:Int) -> Int{
 }
 
 let maximum = theMax(3,100)
-// can also print out the result
+
+// can also print out the result, in effect passing a function to a function
+
 println(theMax(1000,100))
+
 
 //now, let's make the print statement a little more user friendly.
 //Recall that if you want to use println out a variable, you need to enclose the variable like so:
 // println("\(variable)")
 
-println("The maximum of 1000 and 100 is \(theMax(1000,100))")
+println("The maximum of 100 and 1000 is \(theMax(100,1000))")
 
 //
 // function with two parameters and two return values
@@ -90,6 +87,7 @@ println(sortTwoStrings("Harley Quinn", "Joker"))
 // let's use a method on Array called append to write a slightly different function.
 
 // for reference
+
 var array = ["Bobby"]
 array.append("Peter")
 array.append("Greg")
@@ -110,6 +108,9 @@ func sortTwoStringsIntoArray(string1: String, string2: String) -> [String]{
 }
 
 let myArray = sortTwoStringsIntoArray("Zander", "Buffy")
+
 println("The sorted array is \(myArray).")
+
+
 
 
