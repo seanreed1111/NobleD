@@ -1,3 +1,6 @@
+// Dictionaries in Swift
+// "String Optional" data type
+
 // In this section we will discuss dictionaries in Swift, and also a brand new data type, String?
 
 // Let's begin with dictionaries
@@ -6,7 +9,7 @@
 
 // We can use the key to insert into and retrieve the pairs of items from the dictionary
 
-// The keys are typically Strings
+// The keys are typically of String type.
 // The values can be of any type, even arrays and other dictionaries.
 
 // as an example, let's define a dictionary which has Strings as both the keys and the values
@@ -31,12 +34,12 @@ myDictionary["Trixie"]
 
 // But why is this new Type called String? even necessary?
 
-// Optionals are necessary in Swift because they signify that a variable is allowed something to be nil, which in Swift means "Does Not Exist"
+// Optionals are necessary in Swift because they signify that a variable is allowed to be nil, which in Swift means "Does Not Exist"
 
 // Can anyone guess why this might be needed for dictionaries when we try to retrieve a value for a given key?
 
 //Answer.
-// Think about the case where I try to use a key on a dictionary where that key is not in the dictioary. 
+// Think about the case where you try to use a key on a dictionary where that key is not in the dictionary.
 
 //If the key is not in the dictionary, then the value will also not be in the dictionary. 
 
@@ -60,14 +63,13 @@ myDictionary["Norton"] // nil, since no key of "Norton" exists
 
 println(myDictionary)
 
-// another thing is that you should not in any way rely on the order of how these items were placed into the array, since the system could potentially change this at any time. Dictionaries are an unordered collection
-
 
 // If you have a dictionary and you want to make an array of all the keys, you can type:
 
 Array(myDictionary.keys)
 
 // If you have a dictionary and you want to make an array of all the keys, you can type:
+
 Array(myDictionary.values)
 
 // dictionaries are an extremely common way of passing data back and forth on the internet

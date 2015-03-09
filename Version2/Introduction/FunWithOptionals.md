@@ -1,3 +1,4 @@
+// Playground - noun: a place where people can play
 
 import UIKit
 
@@ -5,31 +6,9 @@ var str:String? = "Hello, Optionals"
 
 // An important concept to grasp with any computer language is how it deals with the concept of nothingness. 
 // Existentialism and computers go hand in hand
+// Since Swift is strict on types, they had to make a decision: What types are allowed to be 'nothing', also known as nil?
 
-// Since Swift is strict on types, they had to make a decision: What types are allowed to be 'nothing'?
-// we saw with dictionaries that if you define a dictionary with String keys and String values, use a key to look up a value, the variable returned is a completely different type: String?, called a string optional or an optional string.
-
-let dict = ["Freddie":"Mercury"]
-
-var newVariable = dict["Freddie"]
-
-//the type of newVariable is String?, to allow for the possibility that the key "Freddie" does not exist in the dictionary, and so newVariable might be nil
-
-newVariable = dict["Elton"]
-
-// Thus, since newVariable is a String?, the location in the computer's memory that is used to store newVariable either holds a String or it holds nil.
-
-//IMPORTANT: The type of String? is not the same as the type of String. 
-//Optionals are a COMPLETELY NEW Type
-
-// myOptStr and myString are two entirely different types in Swift!
-
-
-let myString: String = "I don't think we're in Kansas anymore."
-let myOptStr: String? = myString
-
-
-
+// Think about a value before you set it. It is set to 'nothing'. 
 
 // As a simple example, suppose you've collected a student's test grades in an array
 
@@ -138,17 +117,6 @@ if let newInt = optionalInt {
 }
 
 // It turns out that you will see optionals and use optional binding EVERYWHERE in Swift.
-
-//recall
-//myString: String = "I don't think we're in Kansas anymore."
-//myOpt: String? = myString
-
-if let Str = myOptStr {
-    println(Str)
-}
-
-// notice that Str is now of STRING Type
-
 // We use optionals in places where variables have not yet been assigned a value. We will see code like this
 
 var myController: UIViewController? //this declares a myController as type UIViewController object and sets its value to nil, so we can deal with it later.

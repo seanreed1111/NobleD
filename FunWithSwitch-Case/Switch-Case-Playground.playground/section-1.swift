@@ -1,21 +1,27 @@
-// Playground - noun: a place where people can play
-
-import UIKit
+// More Practice with Switch Case
 
 var str = "Hello, switch-case"
 
-// So we talked about using IF-THEN-ELSE-IF, and it the end it was suggested that you try to limit the number of ELSE IF clauses you use. 
-// But what if you are in a situation where you legitimately have a lot of different choices and you need to respond to each different option?
+// So we talked about using the Switch-Case statement with Enums
 
-// In those cases, Swift offers you the Switch-Case statement
-// race cars - audio
-// petting zoo - animal sounds - educational app
+// Switch-Case is also useful at other times.
 
-// let's say you are building an educational app for children that shows five different animals on the screen, and has a bunch of sound files filled with the proper animal sounds. When the child touches the animal, you want to the correct sound file to play.
+// In particular, Switch-Case is preferable to writing large blocks of IF-Then-ElseIf- statements in Swift
 
-// Or, let's say you want to build a motorcycle racing app where you let the rider change gears from 1st to 6th, and the rider speeds up automatically when shifting to a higher the gear.
+// Let's look at two more examples of Swtich-Case in Action
 
-// these are both situations where you could use the Switch-case statement.
+// Example #1
+// You are building an educational app for children that shows five different animals on the screen, and has a bunch of sound files filled with the proper animal sounds.
+
+// When the child touches the animal, you want to the correct sound file to play.
+
+// Example #2
+// You want to build a motorcycle racing app where you let the rider change gears from 1st to 6th, and you want to provide different info depending on the exact gear the bike is in.
+
+// These are both situations where you could use the Switch-case statement.
+
+// Let's start with example #1
+// We define the array of animals like so
 
 let animals = ["Bear", "Tiger", "Gorilla", "Snake", "Sea Lion"]
 

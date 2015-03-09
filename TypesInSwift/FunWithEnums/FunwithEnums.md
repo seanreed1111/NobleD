@@ -1,5 +1,6 @@
 // Fun with Enums.
 // Introduction to the Enum type
+// Introduction to Control Flow with Switch-Case Statements
 
 
 // Recall that the type Bool in Swift has two possible values, true and false.
@@ -64,7 +65,7 @@ var myProfiles: [Datable] = [profile1, profile2, profile3, profile4]
 // But I want to introduce another powerful construct in Swift
 //called Switch-Case
 
-// Switch-case is the preferred way to work with Enum's because it makes your code a little easier to read than doing a lot of 'if then else if' statements.
+// Switch-Case is the preferred way to work with Enum's because it makes your code a little easier to read than doing a lot of 'if then else if' statements.
 
 //Let's loop through all the profiles, and put a Switch-Case statement inside the loop
 
