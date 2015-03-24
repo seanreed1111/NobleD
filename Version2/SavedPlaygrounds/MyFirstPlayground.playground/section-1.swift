@@ -18,6 +18,7 @@ println(string2)
 println(string3)
 println(string4)
 println(myString)
+// stopping point of first video
 
 
 

@@ -1,8 +1,33 @@
-// Playground - noun: a place where people can play
+// Open up a file with nothing in it
+// that way the comments and the "import" statement are 
+// not distracting, and I can concentrate on the 
+introduction to variables.
 
-import UIKit
+Introduce what a variable is
+A variable is storage for results or other things we need
 
+// Make sure to give the variable names some distinction
+e.g. 
+var greeting = "Hello, Playground"
+rather than 
 var str = "Hello, playground"
+
+Do not repeat the same thing more than twice.
+
+Jump into println(greeting) right away, so that the users will have the concept of the fact that variables are storage.
+
+Use as much connective tissue as you can
+
+Introduce Comments by going up and commenting out a line
+where the variables are defined, to get an immediate error.
+Then explain that anything to the right of // is ignored by the computer and not executed.
+
+Assume that the users will not be typing anything into the file other than what I tell them to type.
+
+Make sure I keep the focus of the lecture, and constantly communicate why I am having them do things.
+
+
+
 
 type in
 
