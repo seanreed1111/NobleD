@@ -190,7 +190,7 @@ lightSwitchOn = false
 
 
 // Next up, we are going to talk about arrays.
-// An Array is a variable that holds a collection of elements that all have the same type.
+// An Array is a variable that holds a ordered collection of elements that all have the same type.
 // e.g., in Swift we can have an String array, or a Bool array,  or an Int array.
 
 // Variables of the Array type still have to be declared and assigned values just as the other types we've learned. However, the syntax always uses an opening square bracket, [, and a closing square bracket, ], to denote the beginning and the ending of the Array, respectively. 
@@ -212,5 +212,11 @@ var series = [1.1, 2.2, 3.3, 4.4]
 
 // not surprisingly, we write the 'type' of series as [Double]
 
+// We can make an Array of any data type in Swift.
+// If we wanted to, we could even make an Array of other arrays!
+// But we won't do this now.
+
+// we've said that an Array is an ORDERED list of elements.
+// This means that the order of the items in the array doesn't change UNLESS you as the programmer explicitly change it.
 
 
